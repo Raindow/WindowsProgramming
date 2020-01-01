@@ -1,0 +1,208 @@
+<UI version="4.0" >
+ <class>ImgProcessingClass</class>
+ <widget class="QMainWindow" name="ImgProcessingClass" >
+  <property name="objectName" >
+   <string notr="true">ImgProcessingClass</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+	<x>0</x>
+	<y>0</y>
+    <width>1000</width>
+    <height>622</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>ImgProcessing</string>
+  </property>
+  <property name="styleSheet">
+    <string notr="true">
+      background-color:white;
+      border-color:red;
+    </string>
+  </property>
+   <widget class="QWidget" name="centralWidget">
+     <widget class="QLabel" name="pic1">
+       <property name="geometry">
+         <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>440</width>
+           <height>272</height>
+         </rect>
+       </property>
+       <property name="styleSheet">
+         <string notr="true">
+           background-color:rgba(254, 223, 225, 0.2);
+           border-radius:15px
+         </string>
+       </property>
+       <property name="text">
+         <string/>
+       </property>
+     </widget>
+     <widget class="QLabel" name="pic2">
+       <property name="geometry">
+         <rect>
+           <x>10</x>
+           <y>290</y>
+           <width>440</width>
+           <height>272</height>
+         </rect>
+       </property>
+       <property name="styleSheet">
+         <string notr="true">
+           background-color:rgba(254, 223, 225, 0.4);
+           border-radius:15px
+         </string>
+       </property>
+       <property name="text">
+         <string/>
+       </property>
+     </widget>
+     <widget class="QLabel" name="pic3">
+       <property name="geometry">
+         <rect>
+           <x>460</x>
+           <y>10</y>
+           <width>531</width>
+           <height>501</height>
+         </rect>
+       </property>
+       <property name="font">
+         <font>
+           <family>Agency FB</family>
+           <pointsize>9</pointsize>
+         </font>
+       </property>
+       <property name="styleSheet">
+         <string notr="true">
+           background-color:rgba(254, 223, 225, 0.6);
+           border-radius:15px
+         </string>
+       </property>
+       <property name="text">
+         <string/>
+       </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+         <rect>
+           <x>460</x>
+           <y>517</y>
+           <width>531</width>
+           <height>45</height>
+         </rect>
+       </property>
+       <property name="font">
+         <font>
+           <family>幼圆</family>
+           <pointsize>16</pointsize>
+         </font>
+       </property>
+       <property name="styleSheet">
+         <string notr="true">
+           border-radius:10px;
+           background-color:rgba(232, 122, 144, 0.4);
+           color:rgb(181, 73, 91)
+         </string>
+       </property>
+       <property name="text">
+         <string>开        始        拼        合</string>
+       </property>
+     </widget>
+   </widget>
+   <widget class="QMenuBar" name="menuBar">
+     <property name="geometry">
+       <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1000</width>
+         <height>26</height>
+       </rect>
+     </property>
+     <widget class="QMenu" name="menu_File">
+       <property name="title">
+         <string>文件</string>
+       </property>
+       <addaction name="action_Open"/>
+       <addaction name="actionSave"/>
+       <addaction name="action_SaveAs"/>
+     </widget>
+     <widget class="QMenu" name="menu_Setting">
+       <property name="title">
+         <string>设置</string>
+       </property>
+       <widget class="QMenu" name="menu">
+         <property name="title">
+           <string>拼合方式</string>
+         </property>
+         <addaction name="action_Normal"/>
+         <addaction name="action_SURF"/>
+         <addaction name="action_ORB"/>
+         <addaction name="action_OpencvStitch"/>
+       </widget>
+       <addaction name="menu"/>
+     </widget>
+     <addaction name="menu_File"/>
+     <addaction name="menu_Setting"/>
+   </widget>
+   <widget class="QStatusBar" name="statusBar"/>
+   <action name="action_Open">
+     <property name="text">
+       <string>打开...</string>
+     </property>
+     <property name="shortcutVisibleInContextMenu">
+       <bool>false</bool>
+     </property>
+   </action>
+   <action name="actionSave">
+     <property name="text">
+       <string>保存</string>
+     </property>
+   </action>
+   <action name="action_SaveAs">
+     <property name="text">
+       <string>另存为</string>
+     </property>
+   </action>
+   <action name="action_Normal">
+     <property name="checkable">
+       <bool>true</bool>
+     </property>
+     <property name="checked">
+       <bool>true</bool>
+     </property>
+     <property name="text">
+       <string>普通</string>
+     </property>
+   </action>
+   <action name="action_SURF">
+     <property name="checkable">
+       <bool>true</bool>
+     </property>
+     <property name="text">
+       <string>基于SURF算法</string>
+     </property>
+   </action>
+   <action name="action_ORB">
+     <property name="checkable">
+       <bool>true</bool>
+     </property>
+     <property name="text">
+       <string>基于ORB算法</string>
+     </property>
+   </action>
+   <action name="action_OpencvStitch">
+     <property name="checkable">
+       <bool>true</bool>
+     </property>
+     <property name="text">
+       <string>OpencvStitch算法</string>
+     </property>
+   </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</UI>
